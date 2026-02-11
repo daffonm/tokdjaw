@@ -1,8 +1,7 @@
 @import "tailwindcss";
-
+/* 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+
 }
 
 @theme inline {
@@ -17,10 +16,48 @@
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
-body {
+/* body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+} */
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 1.5rem
+}
+
+.bg-main {
+  background-color: rgb(138, 46, 46);
+  color: white;
+}
+
+.bd-hover:hover {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.bd {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.bd-2 {
+box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+}
+
+.gradient {
+  
+  background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%)
+}
+
+.glow {
+  box-shadow: 0 0 19px 4px rgb(198,210,255);
 }
