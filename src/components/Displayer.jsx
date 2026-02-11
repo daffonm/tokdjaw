@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 import Sidebar from "./Sidebar"
 import Navbar from "./Navbar"
@@ -8,6 +8,8 @@ import Navbar from "./Navbar"
 import HomeDisplay from "./HomeDisplay"
 import Repository from "./Repository"
 import Chatbot from "./Chatbot"
+
+import { usePDFContext } from "@/context/PDFContext"
 
 export default function Displayer({}) {
 
@@ -21,10 +23,23 @@ export default function Displayer({}) {
 
 
 
+  const [selectedFile, setSelectedFile] = useState(null);
+
+  const { pdfFiles, pdfText, logData, loading, error } = usePDFContext();
+
+  useEffect(() => {
+    // Memanggil fungsi log setelah komponen dimuat
+    // logData();  // Mencetak data ke console
+    console.log(pdfFiles)
+    console.log(pdfText)
+  }, [pdfFiles, pdfText, loading, error]);  // Hanya memanggil jika data berubah
+
+
+
 
     return (
         <section className="h-screen w-screen flex flex-row bg-gray-50 relative">
-            <Sidebar sideMenus={sideMenus} activeMenu={activeMenu} setActiveMenu={setActiveMenu} />
+            {/* <Sidebar sideMenus={sideMenus} activeMenu={activeMenu} setActiveMenu={setActiveMenu} />
 
             {activeMenu !== "Ask AI" ? 
             <div className="w-285 h-full">         
@@ -38,9 +53,10 @@ export default function Displayer({}) {
 
             {activeMenu === "Micro Threads" && 
             <button className="glow absolute w-20 h-20 bg-indigo-200 rounded-full
-            flex flex-col justify-center items-center bottom-15 left-70 z-99">
+            flex flex-col justify-center items-center bottom-15 left-70 z-99"
+            onClick={logData}>
                 <img src="/icons8-plus-48.png" alt=""/>
-            </button>}
+            </button>} */}
 
         </section>
     )
