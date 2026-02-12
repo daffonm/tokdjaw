@@ -49,7 +49,10 @@ export default function Displayer({}) {
             setToggleProfileSetup(true)
             setCurrentId(userDoc.id)
         } else {
-            setIsVendor(true)
+            if (userDoc.role === "supplier") {
+                setIsVendor(true)
+            }
+            setToggleProfileSetup(false)
         }
 
         // console.log(userDoc)
@@ -64,7 +67,7 @@ export default function Displayer({}) {
     {name : "Stock & Supplies", iconUrl:"/icons8-stock-64.png"}
   ]
 
-  const [activeMenu, setActiveMenu] = useState("Micro Threads")
+  const [activeMenu, setActiveMenu] = useState("ASk AI")
 
 
 
@@ -93,7 +96,7 @@ export default function Displayer({}) {
 
 
 
-            <Sidebar sideMenus={isVendor? sideMenus.slice(0,3) : sideMenus} activeMenu={activeMenu} setActiveMenu={setActiveMenu} />
+            <Sidebar sideMenus={isVendor? sideMenus.slice(2,4) : sideMenus} activeMenu={activeMenu} setActiveMenu={setActiveMenu} />
 
             {activeMenu !== "Ask AI" ? 
             <div className="w-285 h-full">         
