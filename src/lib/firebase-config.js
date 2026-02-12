@@ -2,16 +2,16 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 // TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyB3N0tdGMJILcDA0O6ohL_8fleRdjG0RqE",
-  authDomain: "bidan-wahyu-app-qboq1.firebaseapp.com",
-  projectId: "bidan-wahyu-app-qboq1",
-  storageBucket: "bidan-wahyu-app-qboq1.firebasestorage.app",
-  messagingSenderId: "862611359977",
-  appId: "1:862611359977:web:4eb19ce62f70d604508878"
+  apiKey: "AIzaSyAgwigkCJdAqMGcolngAhSXWWseV_GAtM4",
+  authDomain: "sushi-store-5614f.firebaseapp.com",
+  projectId: "sushi-store-5614f",
+  storageBucket: "sushi-store-5614f.firebasestorage.app",
+  messagingSenderId: "314574065837",
+  appId: "1:314574065837:web:f5208db945ebd6af79b624",
+  measurementId: "G-EKPNYNWPD4"
 };
 
 // Initialize Firebase

@@ -143,7 +143,7 @@ export default function AuthProvider({ children }) {
     }
   };
 
-  const register = async ({ email, password, username }) => {
+  const register = async ({ email, password, username, role = "user" }) => {
     setAuthLoading(true);
     setError(null);
     try {
@@ -158,7 +158,7 @@ export default function AuthProvider({ children }) {
         username: (username || "").trim() || e.split("@")[0],
         createdAt: serverTimestamp(),
         updatedAt: serverTimestamp(),
-        role: "customer",
+        role: role,
         photoURL: cred.user.photoURL || null,
       });
 

@@ -3,7 +3,7 @@ export default function HomeDisplay({}) {
         <div className = "flex flex-col w-full  h-158 overflow-y-scroll ">
 
             <div className="p-4 pl-8 flex flex-col w-full gap-4">
-                <h1 className="pl-4">Trending  Posts</h1>
+                <h1 className="pl-4">Trending Discussion</h1>
 
                 {/* Container */}
                 <div className="flex flex-row w-full gap-8 overflow-x-scroll p-4">
