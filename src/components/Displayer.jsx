@@ -64,10 +64,10 @@ export default function Displayer({}) {
     {name : "Micro Threads", iconUrl:"/icons8-threads-48.png"},
     {name : "Repositories", iconUrl:"/icons8-repository-48.png"},
     {name : "Ask AI", iconUrl:"/icons8-ai-64.png"},
-    {name : "Stock & Supplies", iconUrl:"/icons8-stock-64.png"}
+   
   ]
 
-  const [activeMenu, setActiveMenu] = useState("ASk AI")
+  const [activeMenu, setActiveMenu] = useState("Ask AI")
 
 
 
@@ -96,7 +96,7 @@ export default function Displayer({}) {
 
 
 
-            <Sidebar sideMenus={isVendor? sideMenus.slice(2,4) : sideMenus} activeMenu={activeMenu} setActiveMenu={setActiveMenu} />
+            <Sidebar sideMenus={isVendor? sideMenus.slice(2,3) : sideMenus} activeMenu={activeMenu} setActiveMenu={setActiveMenu} />
 
             {activeMenu !== "Ask AI" ? 
             <div className="w-285 h-full">         
